@@ -9,25 +9,28 @@
         body {
             font-family: Arial;
             margin: 0;
-            background-color: #f4f4f4;
+            background: #f4f4f4;
         }
 
         header {
-            background-color: #2e7d32;
+            background: linear-gradient(135deg, #2e7d32, #1b5e20);
             color: white;
             text-align: center;
-            padding: 25px;
+            padding: 40px 20px;
         }
 
         .container {
+            max-width: 900px;
+            margin: auto;
             padding: 15px;
         }
 
         .card {
             background: white;
             padding: 15px;
-            margin: 10px 0;
-            border-radius: 10px;
+            margin: 12px 0;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
 
         .price {
@@ -36,20 +39,55 @@
             font-weight: bold;
         }
 
+        /* PRODUCT GALLERY */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .product {
+            background: white;
+            padding: 10px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .product img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .product h3 {
+            font-size: 14px;
+            margin: 8px 0 4px;
+        }
+
+        .product p {
+            color: #2e7d32;
+            font-weight: bold;
+            margin: 0;
+        }
+
         .btn {
             display: block;
             text-align: center;
             background: #25D366;
             color: white;
-            padding: 12px;
-            border-radius: 8px;
+            padding: 14px;
+            border-radius: 10px;
             text-decoration: none;
+            font-weight: bold;
             margin-top: 10px;
         }
 
         footer {
             text-align: center;
-            padding: 15px;
+            padding: 20px;
             background: #333;
             color: white;
             margin-top: 20px;
@@ -60,33 +98,65 @@
 <body>
 
 <header>
-    <h1>Mwea Pishori Rice Store 🌾</h1>
-    <p>Pure Kenyan Premium Aromatic Rice</p>
+    <h1>🌾 Mwea Pishori Rice Store</h1>
+    <p>Premium Aromatic Kenyan Rice • Fresh from Mwea Farms</p>
 </header>
 
 <div class="container">
 
     <div class="card">
         <h2>About Our Rice</h2>
-        <p>We sell premium Mwea Pishori rice directly sourced from Kenyan farms. Clean, aromatic, and high quality.</p>
+        <p>We sell high-quality Mwea Pishori rice directly sourced from Kenyan farmers. Clean, aromatic, and carefully packaged for homes and businesses.</p>
     </div>
 
     <div class="card">
-        <h2>Prices</h2>
-        <p class="price">1kg - KSh 150</p>
-        <p class="price">2kg - KSh 300</p>
-        <p class="price">5kg - KSh 700</p>
-        <p class="price">10kg - KSh 1,300</p>
+        <h2>🖼️ Our Rice Products</h2>
+
+        <div class="gallery">
+
+            <div class="product">
+                <img src="rice1.jpg" alt="1kg Rice">
+                <h3>1kg Pack</h3>
+                <p>KSh 200</p>
+            </div>
+
+            <div class="product">
+                <img src="rice2.jpg" alt="2kg Rice">
+                <h3>2kg Pack</h3>
+                <p>KSh 400</p>
+            </div>
+
+            <div class="product">
+                <img src="rice3.jpg" alt="5kg Rice">
+                <h3>5kg Pack</h3>
+                <p>KSh 1000</p>
+            </div>
+
+            <div class="product">
+                <img src="rice4.jpg" alt="10kg Rice">
+                <h3>10kg Pack</h3>
+                <p>KSh 1900</p>
+            </div>
+
+        </div>
     </div>
 
     <div class="card">
-        <h2>Order Now</h2>
+        <h2>🔥 Why Choose Us</h2>
+        <p>✔ Fresh Mwea harvest</p>
+        <p>✔ Clean and premium quality</p>
+        <p>✔ Affordable prices</p>
+        <p>✔ Fast delivery in Kenya</p>
+    </div>
+
+    <div class="card">
+        <h2>📦 Order Now</h2>
         <p>Click below to order directly on WhatsApp</p>
 
         <a class="btn"
-           href="https://wa.me/254700000000?text=Hello%20I%20want%20to%20order%20Mwea%20Pishori%20Rice"
+           href="https://wa.me/254758916107?text=Hello%20I%20want%20to%20order%20Mwea%20Pishori%20Rice.%20Please%20share%20delivery%20details."
            target="_blank">
-           Order on WhatsApp
+           ORDER ON WHATSAPP
         </a>
     </div>
 
